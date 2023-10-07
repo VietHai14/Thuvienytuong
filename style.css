@@ -1,0 +1,686 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+	font-family: Helvetica, Arial, sans-serif;
+}
+/*Dùng chung*/
+.clear {
+	clear: both;
+}
+
+.text-white {
+	color: #fff !important;
+}
+
+
+.row{
+	width: 100%;
+	height: 300px;
+	display: flex;
+	overflow-x: auto;
+
+}
+.col{
+	width: 300px;
+	flex-shrink: 0;
+	height: 100%;
+}
+
+.col {
+	float: left;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
+.mt-8 {
+	margin-top: 8px !important;
+}
+
+.mt-16 {
+	margin-top: 16px !important;
+}
+
+.col-half {
+	width: 50%;
+}
+
+.col-full {
+	width: 100%;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.pull-right {
+	float: right !important;
+}
+
+.btn {
+	color: #fff;
+	background-color: #000;
+	text-decoration: none;
+	padding: 11px 16px;
+	display: inline-block;
+	margin-top: 15px;
+	border: none;
+}
+.btn:hover {
+	cursor: pointer;
+	color: #fff;
+	background-color: #45A29E;
+}
+
+
+#header {
+	height: 46px;
+	background-color: #66FCF1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+#nav {
+	display: inline-block;
+}
+
+#nav .subnav {
+	list-style-type: none;
+}
+
+#nav > li {
+	display: inline-block;
+}
+
+#nav li {
+	position: relative;
+}
+
+#nav > li > a {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+#nav li a {
+	text-decoration: none;
+	line-height: 46px;
+	padding: 0 24px;
+	display: block;
+}
+
+#nav li:hover .subnav {
+	display: block;
+}
+
+#nav .subnav li:hover a,
+#nav > li:hover > a {
+	color: #fff;
+	background-color: #00CCFF;
+}
+
+#nav .subnav {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	min-width: 150px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+	color: #000;
+	padding: 0 14px;
+	line-height: 38px;
+}
+
+#nav .ti-angle-down {
+	font-size: 8px;
+}
+
+#header .search-btn {
+	float: right;
+	padding: 0 21px;
+}
+
+#header .search-btn:hover {
+	background-color: red;
+	cursor: pointer;
+}
+
+#header .ti-search {
+	color: #fff;
+	font-size: 15px;
+	line-height: 46px;
+}
+
+#slideshow {
+	overflow: hidden;
+	height: 510px;
+	width: 982px;
+	margin: 0 auto;
+  }
+  
+  .slide-wrapper {
+	width: 3928px;
+	-webkit-animation: slide 14s ease infinite;
+  }
+  
+  .slide {
+	float: left;
+	height: 510px;
+	width: 982px;
+  }
+  
+  
+  @-webkit-keyframes slide {
+	20% {margin-left: 0px;}
+	30% {margin-left: -982px;}
+	50% {margin-left: -982px;}
+	60% {margin-left: -1964px;}
+	80% {margin-left: -1964px;}
+  }
+
+
+#slider .text-heading {
+	font-weight: 400;
+	font-size: 24px;
+}
+
+#slider .text-description {
+	font-size: 15px;
+	margin-top: 25px;
+}
+
+#content {
+	background-color: #fff;
+}
+
+
+#content .content-section {
+	padding: 64px 0 112px;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content .section-heading {
+	font-size: 30px;
+	text-align: center;
+	font-weight: 400;
+	letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+	font-size: 15px;
+	text-align: center;
+	margin-top: 25px;
+	font-style: italic;
+	opacity: 0.60;
+}
+
+#content .about-text {
+	font-size: 15px;
+	margin-top: 25px;
+	text-align: justify;
+	line-height: 1.5;
+}
+
+#content #headname1{
+	font-size: larger;
+	color: #009688;
+    margin-top: 20px;
+}
+#content #headname2{
+	font-size: larger;
+	color: #009688;
+    margin-top: 20px;
+}
+#content #headname3{
+	font-size: larger;
+	color: #009688;
+    margin-top: 20px;
+}
+
+#content .member-img {
+	margin-top: 15px;
+	width: 100%;
+	border-radius: 4px;
+}
+
+
+.tour-section {
+	background-color: #1F2833;
+	padding-bottom: 48px;
+}
+
+.tickets-list {
+	list-style-type: none;
+	background-color: #fff;
+	margin-top: 40px;
+}
+
+.tickets-list li {
+	color: #757575;
+	font-size: 15px;
+	padding: 8px 16px;
+	border-bottom: 1px solid #ddd;
+	/*background-color: #fff;*/
+}
+
+.tickets-list .sold-out {
+	background-color: #f44336;
+	color: #fff;
+	padding: 3px 4px;
+	margin-left: 16px;
+}
+
+.tickets-list .quantity {
+	float: right;
+	width: 24px;
+	height: 24px;
+	background-color: #000;
+	color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 24px;
+    margin-top: -3px;
+}
+
+/*Places*/
+.places-list {
+	margin-top: 32px;
+	/*margin-bottom: 48px;*/
+	/*Thêm vào đây*/
+
+}
+
+
+.places-img {
+	width: 100%;
+	display: block;
+
+}
+
+.places-img:hover {
+	opacity: 0.60;
+}
+
+.places-body {
+	background-color: #fff;
+	font-size: 15px;
+	padding: 16px;
+		;
+}
+
+.places-heading {
+	font-size: 15px;
+	font-weight: bolder;
+}
+
+.places-time {
+	margin-top: 15px;
+	color: #757575;
+}
+
+.places-desc {
+	margin-top: 15px;
+	line-height: 1.4;
+}
+
+
+/*Contact content*/
+.contact-content{
+	margin-top: 48px;
+}
+
+.contact-info {
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+	width: 30px;
+	display: inline-block;
+}
+
+.contact-form {
+	font-size: 15px;
+
+}
+
+.contact-form .form-control {
+	padding: 10px;
+	border: 1px solid #ccc;
+	width: 100%;
+}
+
+
+#footer .social-list {
+	font-size: 40px;
+}
+
+#footer .social-list a {
+	color: rgba(0, 0, 0, 0.6);
+	text-decoration: none;
+	font-size: 24px;
+}
+#footer .copyright  a:hover, 
+#footer .social-list a:hover {
+	color: rgba(0, 0, 0, 0.80);
+}
+
+#footer .copyright {
+	color: rgba(0, 0, 0, 0.80);
+	margin-top: 15px
+}
+
+#footer .copyright  a{
+	color: #00CCFF;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open {
+	display: flex;
+}
+
+.modal-container {
+    background: #fff;
+    width: 900px;
+	max-width: calc(100% - 32px);
+    min-height: 200px;
+	position: relative;
+	animation: modalFaceIn ease 0.5s;
+}
+
+.modal-header {
+    background: #009688;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-heading-icon {
+	margin-right: 16px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 14px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.modal-close:hover {
+	opacity: 7;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-lable {
+    display: block;
+	margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+	margin-bottom: 20px;
+}
+
+#buy-stickets:hover {
+	opacity: 0.9;
+}
+#buy-stickets {
+    background: #009688;
+    width: 100%;
+    padding: 13px;
+    font-size: 20px;
+    color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#xemLop{
+	color: #fff;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+
+#xemlop a{
+	padding-top: 20px;
+}
+
+#xemLop:hover{
+	color: #00CCFF;
+	font-size: 18px;
+	text-decoration: underline;
+}
+
+.modal-footer {
+	padding: 16px;
+	text-align: right;
+}
+
+.modal-footer a {
+	color: #2196F3;
+}
+.disrow{
+	margin-left: -8px;
+	margin-right: -8px;
+}
+.disrow::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.discol{
+	float: left;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+.dcol-third {
+	width: 33.33333%;
+}
+.dcol-half {
+	width: 50%;
+}
+.dcol-full {
+	width: 100%;
+}
+
+.CSSgal {
+	position: relative;
+	overflow: hidden;
+	height: 100%; /* Or set a fixed height */
+  }
+  
+  /* SLIDER */
+  
+  .CSSgal .slider {
+	height: 100%;
+	white-space: nowrap;
+	font-size: 0;
+	transition: 0.8s;
+  }
+  
+  /* SLIDES */
+  
+  .CSSgal .slider > * {
+	font-size: 1rem;
+	display: inline-block;
+	white-space: normal;
+	vertical-align: top;
+	height: 100%;
+	width: 100%;
+	background: none 50% no-repeat;
+	background-size: cover;
+  }
+  
+  /* PREV/NEXT, CONTAINERS & ANCHORS */
+  
+  .CSSgal .prevNext {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	width: 100%;
+	height: 0;
+  }
+  
+  .CSSgal .prevNext > div+div {
+	visibility: hidden; /* Hide all but first P/N container */
+  }
+  
+  .CSSgal .prevNext a {
+	background: #fff;
+	position: absolute;
+	width:       60px;
+	height:      60px;
+	line-height: 60px; /* If you want to place numbers */
+	text-align: center;
+	opacity: 0.7;
+	-webkit-transition: 0.3s;
+			transition: 0.3s;
+	-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+	left: 0;
+  }
+  .CSSgal .prevNext a:hover {
+	opacity: 1;
+  }
+  .CSSgal .prevNext a+a {
+	left: auto;
+	right: 0;
+  }
+  
+  /* NAVIGATION */
+  
+  .CSSgal .bullets {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	padding: 10px 0;
+	width: 100%;
+	text-align: center;
+  }
+  .CSSgal .bullets > a {
+	display: inline-block;
+	width:       30px;
+	height:      30px;
+	line-height: 30px;
+	text-decoration: none;
+	text-align: center;
+	background: rgba(255, 255, 255, 1);
+	-webkit-transition: 0.3s;
+			transition: 0.3s;
+  }
+  .CSSgal .bullets > a+a {
+	background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+  }
+  .CSSgal .bullets > a:hover {
+	background: rgba(255, 255, 255, 0.7) !important;
+  }
+  
+  /* NAVIGATION BUTTONS */
+  /* ALL: */
+  .CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
+  /* ACTIVE */
+  #s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+  #s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+  #s3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
+  #s4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+
+  /* ALL: */
+  .CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+  /* ACTIVE: */
+  #s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+  #s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+  #s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+  #s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+
+  
+  #s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+  #s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+  #s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+  #s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+  
+
+  .CSSgal{
+	color: #fff;  
+	text-align: center;
+  }
+  .CSSgal .slider h2 {
+	margin-top: 40vh;
+	font-weight: 200;
+	letter-spacing: -0.06em;
+	word-spacing: 0.2em;
+	font-size: 3em;
+  }
+  .CSSgal a {
+	border-radius: 50%;
+	margin: 0 3px;
+	color: rgba(0,0,0,0.8);
+	text-decoration: none;
+  }
+
+#myBtn {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 20px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: red; /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
+	font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+	background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+@keyframes modalFaceIn {
+	from {
+		opacity: 0;
+
+		transform: translateY(-130px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
